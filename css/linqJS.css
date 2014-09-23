@@ -1,0 +1,14 @@
+.header {
+  height: 100px;
+  line-height: 100px;
+  background: #808080;
+  color: #fff;
+  vertical-align: middle;
+}
+body {
+  background: #d7d7d7;
+}
+.syntaxhighlighter {
+  padding: 10px 0;
+  margin: 0!important;
+}

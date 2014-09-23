@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title>LinqJS</title>
+        <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="css/shCore.css"/>
+        <link type="text/css" rel="Stylesheet" href="css/shThemeDefault.css"/>
+        <link href="css/common.css" type="text/css" rel="stylesheet">
+        <link href="css/linqJS.css" type="text/css" rel="stylesheet">
+
+        <script type="text/javascript" src="src/lib/shCore.js"></script>
+        <script type="text/javascript" src="src/lib/shLegacy.js"></script>
+        <script type="text/javascript" src="src/lib/shAutoloader.js"></script>
+        <script type="text/javascript" src="src/lib/shBrushJScript.js"></script>
+        <script type="text/javascript">SyntaxHighlighter.all();</script>
+    </head>
+    <body>
+        <div class="font-xl space-m text-center header">LinqJS</div>
+        <div class="space l all">
+            <div class="font-m">
+                Usage
+            </div>
+            <div class="font-s space m top">
+                <div>Example 1</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .where(function(item){
+                            return item % 2 === 0
+                        });
+                </pre>
+                <div class="space m top">Example 2</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .where(function(item){
+                            return item % 2 === 0
+                        })
+                        .forEach(function(item){
+                            console.log(item+1);
+                        });
+                </pre>
+            </div>
+        </div>
+    </body>
+</html>
