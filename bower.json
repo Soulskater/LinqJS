@@ -2,7 +2,7 @@
   "name": "LinqJS",
   "version": "0.1.0",
   "description": "Useful linq function implementations for javascript",
-  "main": "src/linq.js"
+  "main": "src/linq.js",
   "keywords": [
     "linq",
     "javascript"
