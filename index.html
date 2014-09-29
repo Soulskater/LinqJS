@@ -19,27 +19,158 @@
         <div class="font-xl space-m text-center header">LinqJS</div>
         <div class="space l all">
             <div class="font-m">
-                Usage
+                Functions
             </div>
-            <div class="font-s space m top">
-                <div>Example 1</div>
+            <div class="font-s space m top left">
+                <!--GET-->
+                <div class="feature">get</div>
+                <div class="space m left">
+                    Returns with the raw array object.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        var result= linq(arr)
+                        .where(function(item, index){
+                            return item % 2 === 0;
+                        }).get();
+                </pre>
+                <!--Where-->
+                <div class="feature">where</div>
+                <div class="space m left">
+                    Filters on the array with the given function, that function has two parameters, current item and index.<br/>
+                    Return value is a linq object.
+                </div>
+                <div>Example</div>
                 <pre class="brush: js;">
                         var arr=[1,2,3,4];
                         linq(arr)
-                        .where(function(item){
-                            return item % 2 === 0
+                        .where(function(item, index){
+                            return item % 2 === 0;
                         });
                 </pre>
-                <div class="space m top">Example 2</div>
+                <!--Any-->
+                <div class="feature">any</div>
+                <div class="space m left">
+                    Iterates over the array, and returns true if any items matches with the condition
+                </div>
+                <div>Example</div>
                 <pre class="brush: js;">
                         var arr=[1,2,3,4];
                         linq(arr)
-                        .where(function(item){
-                            return item % 2 === 0
-                        })
-                        .forEach(function(item){
-                            console.log(item+1);
+                        .any(4);
+                </pre>
+                <!--ForEach-->
+                <div class="feature">forEach</div>
+                <div class="space m left">
+                    Iterates on the array with the given function, that function has two parameters, current item and index.<br/>
+                    This is a void function.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .forEach(function(item, index){
+                            if(item % 2 === 0){
+                                console.log("Foobar");
+                            }
                         });
+                </pre>
+                <!--Map-->
+                <div class="feature">map</div>
+                <div class="space m left">
+                    Creates a new collection, executes the given function and push the result into the new array.<br/>
+                    Return value is a linq object.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .map(function(item, index){
+                            return item * 2;
+                        });
+                </pre>
+                <!--First-->
+                <div class="feature">first</div>
+                <div class="space m left">
+                    Returns with the first selected element according to the given function, otherwise throws an exception.<br/>
+                    With no parameters it returns with the first item if the array.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .first(function(item, index){
+                            return item % 2 === 0;
+                        });
+                </pre>
+                <!--FirstOrDefault-->
+                <div class="feature">firstOrDefault</div>
+                <div class="space m left">
+                    Returns with the first selected element according to the given function, otherwise null.<br/>
+                    With no parameters it returns with the first item if the array.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .firstOrDefault(function(item, index){
+                            return item % 2 === 0;
+                        });
+                </pre>
+                <!--Last-->
+                <div class="feature">last</div>
+                <div class="space m left">
+                    Returns with the last selected element according to the given function, otherwise throws an exception.<br/>
+                    With no parameters it returns with the last item if the array.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .last(function(item, index){
+                            return item % 2 === 0;
+                        });
+                </pre>
+                <!--LastOrDefault-->
+                <div class="feature">lastOrDefault</div>
+                <div class="space m left">
+                    Returns with the last selected element according to the given function, otherwise null.<br/>
+                    With no parameters it returns with the last item if the array.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .lastOrDefault(function(item, index){
+                            return item % 2 === 0;
+                        });
+                </pre>
+                <!--Remove-->
+                <div class="feature">remove</div>
+                <div class="space m left">
+                    The parameter could be a function or an item of the array.<br/>
+                    If the parameter is a value removes it, if it's exits.<br/>
+                    If the parameter is a function removes all of the occurencies from the array.
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .remove(function(item){
+                            return item % 2 === 0;
+                        });
+                </pre>
+                <!--Clear-->
+                <div class="feature">clear</div>
+                <div class="space m left">
+                    Clear the array.<br/>
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,3,4];
+                        linq(arr)
+                        .clear();
                 </pre>
             </div>
         </div>

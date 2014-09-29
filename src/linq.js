@@ -16,6 +16,8 @@
     }
 
     return{
+        //
+        //Returns with the raw array object.
         get: function () {
             return array;
         },
