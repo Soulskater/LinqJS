@@ -126,8 +126,17 @@
         },
         //
         //Iterates throught on the array, and returns true if any items matches with the condition
-        any: function (item) {
-            return array.indexOf(item) !== -1;
+        any: function (itemOrFn) {
+            if (typeof itemOrFn === 'function') {
+                for (var i = 0, len = array.length; i < len; i++) {
+                    if (itemOrFn(array[i], i)) {
+                        return true;
+                    }
+                }
+                return false;
+            } else {
+                return array.indexOf(itemOrFn) !== -1;
+            }
         }
     };
 };
