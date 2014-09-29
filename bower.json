@@ -1,5 +1,5 @@
 {
-  "name": "LinqJS",
+  "name": "linqJS",
   "version": "0.1.0",
   "description": "Useful linq function implementations for javascript",
   "main": "src/linq.js",
