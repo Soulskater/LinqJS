@@ -9,11 +9,16 @@
         <link href="css/common.css" type="text/css" rel="stylesheet">
         <link href="css/linqJS.css" type="text/css" rel="stylesheet">
 
+        <script type="text/javascript" src="src/linq.js"></script>
+
         <script type="text/javascript" src="src/lib/shCore.js"></script>
         <script type="text/javascript" src="src/lib/shLegacy.js"></script>
         <script type="text/javascript" src="src/lib/shAutoloader.js"></script>
         <script type="text/javascript" src="src/lib/shBrushJScript.js"></script>
         <script type="text/javascript">SyntaxHighlighter.all();</script>
+        <script>
+            console.log(linq(1,2,3)[2]);
+        </script>
     </head>
     <body>
         <div class="font-xl space-m text-center header">LinqJS</div>
@@ -38,7 +43,8 @@
                 <!--Where-->
                 <div class="feature">where</div>
                 <div class="space m left">
-                    Filters on the array with the given function, that function has two parameters, current item and index.<br/>
+                    Filters on the array with the given function, that function has two parameters, current item and
+                    index.<br/>
                     Return value is a linq object.
                 </div>
                 <div>Example</div>
@@ -63,7 +69,8 @@
                 <!--ForEach-->
                 <div class="feature">forEach</div>
                 <div class="space m left">
-                    Iterates on the array with the given function, that function has two parameters, current item and index.<br/>
+                    Iterates on the array with the given function, that function has two parameters, current item and
+                    index.<br/>
                     This is a void function.
                 </div>
                 <div>Example</div>
@@ -93,7 +100,8 @@
                 <!--First-->
                 <div class="feature">first</div>
                 <div class="space m left">
-                    Returns with the first selected element according to the given function, otherwise throws an exception.<br/>
+                    Returns with the first selected element according to the given function, otherwise throws an
+                    exception.<br/>
                     With no parameters it returns with the first item if the array.
                 </div>
                 <div>Example</div>
@@ -121,7 +129,8 @@
                 <!--Last-->
                 <div class="feature">last</div>
                 <div class="space m left">
-                    Returns with the last selected element according to the given function, otherwise throws an exception.<br/>
+                    Returns with the last selected element according to the given function, otherwise throws an
+                    exception.<br/>
                     With no parameters it returns with the last item if the array.
                 </div>
                 <div>Example</div>
