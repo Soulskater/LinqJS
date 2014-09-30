@@ -17,7 +17,6 @@
         <script type="text/javascript" src="src/lib/shBrushJScript.js"></script>
         <script type="text/javascript">SyntaxHighlighter.all();</script>
         <script>
-            console.log(linq(1,2,3)[2]);
         </script>
     </head>
     <body>
@@ -27,19 +26,6 @@
                 Functions
             </div>
             <div class="font-s space m top left">
-                <!--GET-->
-                <div class="feature">get</div>
-                <div class="space m left">
-                    Returns with the raw array object.
-                </div>
-                <div>Example</div>
-                <pre class="brush: js;">
-                        var arr=[1,2,3,4];
-                        var result= linq(arr)
-                        .where(function(item, index){
-                            return item % 2 === 0;
-                        }).get();
-                </pre>
                 <!--Where-->
                 <div class="feature">where</div>
                 <div class="space m left">
