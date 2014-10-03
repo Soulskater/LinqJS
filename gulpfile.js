@@ -19,10 +19,10 @@ gulp.task('clean', function (cb) {
 
 //region Live environment
 
-gulp.task('scripts-min', ['clean'], function () {
+gulp.task('scripts-min', function () {
     return gulp.src(paths.scripts)
         .pipe(sourcemaps.init())
-        .pipe(concat('all.min.js'))
+        .pipe(concat('linq.min.js'))
         .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/'));
@@ -32,20 +32,18 @@ gulp.task('scripts-min', ['clean'], function () {
 
 //region Dev environment
 
-gulp.task('scripts', ['lib'], function () {
+gulp.task('scripts', function () {
     return gulp.src(paths.scripts)
+        .pipe(sourcemaps.init())
+        .pipe(concat('linq.js'))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist/'));
 });
 
 //endregion Dev environment
 
-// Rerun the task when a file changes
-gulp.task('watch', function () {
-    gulp.watch(paths.scripts, ['scripts']);
-});
-
 // DEV
-gulp.task('default', ['scripts']);
+gulp.task('build', ['scripts', 'scripts-min']);
 
 gulp.task('dev', ['scripts']);
 
