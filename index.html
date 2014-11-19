@@ -143,6 +143,19 @@
                             return item % 2 === 0;
                         });
                 </pre>
+                <!--GroupBy-->
+                <div class="feature">groupBy</div>
+                <div class="space m left">
+                    Returns with a grouped list the parameter function returns with an array of group properties.<br/>
+                </div>
+                <div>Example</div>
+                <pre class="brush: js;">
+                        var arr=[1,2,2,4];
+                        linq(arr)
+                        .groupBy(function(item){
+                            return [item];
+                        });
+                </pre>
                 <!--Remove-->
                 <div class="feature">remove</div>
                 <div class="space m left">

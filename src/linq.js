@@ -119,6 +119,21 @@
             return match[match.length - 1];
         },
 
+        //Group the array according to the keys in the parameter function
+        groupBy: function (f) {
+            var groups = {};
+            source.forEach( function( o )
+            {
+                var group = JSON.stringify( f(o) );
+                groups[group] = groups[group] || [];
+                groups[group].push( o );
+            });
+            return linq(Object.keys(groups).map( function( group )
+            {
+                return groups[group];
+            }));
+        },
+
         //
         //Remove the given item in parameter if it's exits
         remove: function (itemOrFn) {

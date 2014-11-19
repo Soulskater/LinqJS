@@ -1,6 +1,6 @@
 {
     "name": "linq-js",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "description": "Useful linq function implementations for javascript",
     "main": "linq.js",
     "keywords": [
